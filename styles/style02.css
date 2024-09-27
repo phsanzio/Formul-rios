@@ -1,5 +1,5 @@
 body {
-    background-color: #a0c655;
+    background-color: #e9c28b;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,6 +20,12 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
+hr{
+    margin-top: -10px;
+    border-top: 1px solid black;
+    margin-bottom: 15px;
+}
+
 #title {
     font-size: 1.6em;
     font-weight: bold;
@@ -28,8 +34,8 @@ body {
 
 #subtitle {
     font-size: 0.9em;
-    margin-bottom: -5px;
-    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-top: 5px;
     font-weight: 500;
 }
 
@@ -37,32 +43,38 @@ label {
     font-size: 0.9em;
     width: 40%;
     height: 40%;
-    text-align: right;
+    text-align: left;
 }
 
-input {
-    border-radius: 6px;
-    width: 35%;
-    height: 2em;
+input, textarea {
+    border-radius: 5px;
+    width: 95%;
+    height: 1.5em;
     padding: 0.5em;
-    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     border: 1.3px solid #767676;
     transition: border-color 0.3s ease;
 }
 
-#user, #password{
-    margin-left: 8px;
-    margin-top: 30px;
-    height: auto;
-    width: 95%;
+textarea{
+    min-height: 5em;
+    max-height: 40em;
+    max-width: 95%;
+    min-width: 95%;
+}
+
+#user, #password, #message{
+    margin-top: 10px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    font-weight: 600;
 }
 
 #buttons {
     display: flex;
     justify-content: flex-start;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 button {
@@ -75,22 +87,24 @@ button {
 }
 
 #enter {
-    background: linear-gradient(135deg, #0066ff, #8a2be2);
+    background-color: #f0ad4d;
     color: #ececec;
 }
 
 #enter:hover {
-    background: linear-gradient(135deg, #0049b8, #691bbd); 
+    background-color: #ec9720;
+    transform: scale(1.05)
 }
 
 #clean {
-    background: linear-gradient(135deg, #808080, #4e4e4e);
+    background-color: #f0ad4d;
     color: #ececec;
-    margin-left: 10px;
+    margin-left: 4px;
 }
 
 #clean:hover {
-    background: linear-gradient(135deg, #696969, #000000); 
+    background-color: #ec9720;
+    transform: scale(1.05)
 }
 
 input:hover {
@@ -98,6 +112,16 @@ input:hover {
 }
 
 input:focus {
+    border-color: #5096ff; 
+    border-width: 1.8px;
+    outline: none; 
+}
+
+textarea:hover {
+    border-color: #070707;
+}
+
+#msg:focus {
     border-color: #5096ff; 
     border-width: 1.8px;
     outline: none; 
