@@ -1,0 +1,84 @@
+body {
+    background: linear-gradient(to bottom right, #3E2723, #6D4C41, #7d7774);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#div_contato {
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 45vh;
+    padding: 20px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+#title {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* #bebida, #text2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+} */
+
+#opc{
+    display: flex;
+    flex-direction: row;
+}
+
+#bebida, #torras, #acom{
+    display: flex;
+    flex-direction: column;
+}
+/* #subtitle {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-weight: 500;
+} */
+
+label {
+    font-size: 0.9em;
+    width: 38%;
+}
+
+
+#user, #password, #message{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+}
+
+#buttons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 15px;
+}
+
+button {
+    background: linear-gradient(to right, #5D4037, #685852, #4e4638);
+    border-radius: 6px;
+    height: 2.5em;
+    width: 30%;
+    font-weight: bold;
+    border: none;
+    transition: background 0.3s ease;
+    color: #ececec;
+}
+
+#enter:hover {
+    transform: scale(1.05)
+}

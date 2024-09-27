@@ -4,9 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site 04 - Pedro Sanzio</title>
-    <link rel="stylesheet" href="style04.css">
+    <link rel="stylesheet" href="styles/style04.css">
 </head>
 <body>
-    
+    <form id="div_contato">
+
+        <div id="title">
+            <label for="title">Cafeteria AutoCuidado</label>
+        </div>
+
+        <div id="bebida">
+            <label for="text">Escolha sua bebida</label>
+            <div id="opc">
+                <input type="checkbox" name="bebida" value="puro" checked> Café puro
+                <input type="checkbox" name="bebida" value="leite"> Café com leite
+                <input type="checkbox" name="bebida" value="chocolate"> Chocolate
+            </div>
+        </div>
+
+        <div id="torras">
+            <label for="text">Torra do café</label>
+            <div id="opc">
+                <input type="radio" name="torra" value="leve" checked> Leve
+                <input type="radio" name="torra" value="media"> Média
+                <input type="radio" name="torra" value="forte"> Forte
+            </div>
+        </div>
+     
+        <div id="acom">
+            <label for="text">Acompanhamentos</label>
+            <div id="opc">
+                <input type="checkbox" name="acompa" value="chantily" checked> Chantilly
+                <input type="checkbox" name="acompa" value="raspas"> Raspas de Chocolate
+                <input type="checkbox" name="acompa" value="ovomaltine"> Ovomaltine
+            </div>
+        </div>
+
+        <div id="buttons">
+            <button type="button" id="enter">Fazer Pedido</button>
+        </div>
+
+    </form>
 </body>
 </html>
