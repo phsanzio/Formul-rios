@@ -1,0 +1,100 @@
+body {
+    background: linear-gradient(to bottom right, #3E2723, #6D4C41, #7d7774);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#insert_tasks {
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 19%;
+    height: 95%;
+    padding: 10px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 20px;
+    margin-right: 1em;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+form{
+    width: 95%;
+    height: 95%;
+}
+
+#title {
+    font-size: 1.8vh;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#acom_options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#a_opt {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+
+#subtitle {
+    font-size: 1.12em;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+input{
+    width: 25vh;
+    border-radius: 8px;
+    height: 20vh;
+}
+
+button {
+    background: linear-gradient(to right, #5D4037, #685852, #4e4638);
+    border-radius: 6px;
+    height: 2.5em;
+    width: 9vh;
+    
+    font-weight: bold;
+    border: none;
+    transition: background 0.3s ease;
+    color: #ececec;
+}
+
+#enter:hover {
+    background: linear-gradient(to right, #3F2621, #4A3D3B, #3A3530);
+    transform: scale(1.08)
+}
+
+#view_tarefas {
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 81%;
+    height: 95%;
+    padding: 20px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
