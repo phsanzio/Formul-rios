@@ -1,4 +1,4 @@
-function mudarCor() {
+function on_off() {
     
     const select = document.querySelector('select[name="cor"]');
 
@@ -23,5 +23,5 @@ function mudarCor() {
 
 document.addEventListener('DOMContentLoaded', () => {
     const select = document.querySelector('select[name="cor"]');
-    select.addEventListener('change', mudarCor);
+    select.addEventListener('change', on_off);
 });

@@ -8,7 +8,7 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-#div_contato {
+#div_coffeeshop {
     box-sizing: border-box;
     border-radius: 8px;
     width: 45vh;
@@ -27,33 +27,35 @@ body {
     text-align: center;
 }
 
-#opc{
+#drink_options {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     margin-top: 10px;
 }
 
-img{
-    margin-top: 10px;
-}
-
-#opcs {
+#dt_opt {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    font-size: 0.95em;
+    font-size: 0.97em;
 }
 
-#opt {
+img{
+    margin-top: 12px;
+    height: 4.2em;
+    width: 4.2em;
+}
+
+#acom_options {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-#opts {
+#a_opt {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -61,12 +63,10 @@ img{
     margin-bottom: 10px;
 }
 
-
 #subtitle {
-    font-size: 1.1em;
+    font-size: 1.12em;
     margin-bottom: 10px;
     margin-top: 10px;
-    font-weight: 500;
 }
 
 #buttons {
@@ -87,5 +87,6 @@ button {
 }
 
 #enter:hover {
-    transform: scale(1.05)
+    background: linear-gradient(to right, #3F2621, #4A3D3B, #3A3530);
+    transform: scale(1.08)
 }
