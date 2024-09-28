@@ -21,45 +21,52 @@ body {
 }
 
 #title {
-    font-size: 1.6em;
+    font-size: 1.8em;
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
 }
 
-/* #bebida, #text2 {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 10px;
-} */
-
 #opc{
     display: flex;
     flex-direction: row;
-}
-
-#bebida, #torras, #acom{
-    display: flex;
-    flex-direction: column;
-}
-/* #subtitle {
-    font-size: 0.9em;
+    justify-content: space-around;
+    align-items: center;
     margin-bottom: 5px;
-    margin-top: 5px;
-    font-weight: 500;
-} */
+    margin-top: 10px;
+}
 
-label {
-    font-size: 0.9em;
-    width: 38%;
+img{
+    margin-top: 10px;
+}
+
+#opcs {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    font-size: 0.95em;
+}
+
+#opt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#opts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.95em;
+    margin-bottom: 10px;
 }
 
 
-#user, #password, #message{
+#subtitle {
+    font-size: 1.1em;
+    margin-bottom: 10px;
     margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 #buttons {
