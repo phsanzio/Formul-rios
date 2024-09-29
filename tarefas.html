@@ -21,23 +21,43 @@
                     <div id="subtitle">
                         <label for="text">Insira uma nova tarefa</label>
                     </div>
+
                     <div id="input_task">
-                        <input type="text">
+                        <input type="text" id="write_task">
+                    </div>
+
+                    <div id="subtitle">
+                        <label for="text">Defina a prioridade</label>
+                    </div>
+
+                    <div id="priority_task">
+                        <input type="radio" name="priority" value="alta">Alta
+                        <input type="radio" name="priority" value="baixa" checked>Baixa
                     </div>
     
                 </div>
-        
+                
+                <div id="hidden_div" style="display: none;">
+                </div>    
+
                 <div id="buttons">
-                    <button type="button" id="enter">Salvar</button>
+                    <button type="button" id="enter">Limpar</button>
+                    <button type="button" id="enter" onclick="save_task()">Salvar</button>
                 </div>
         
             </form>
         </div>
 
         <div id="filters">
+            <div id="title">
+                <label for="title">FILTROS</label>
+            </div>
+
             <button type="button" id="all">TODAS</button>
             <button type="button" id="not">NÃO CONCLUÍDAS</button>
             <button type="button" id="yes">CONCLUÍDAS</button>
+            <button type="button" id="yes">ALTA</button>
+            <button type="button" id="yes">BAIXA</button>
         </div>
 
     </div>
@@ -46,52 +66,6 @@
     <div id="view_tarefas">
 
         <div id="gallery_tasks">
-            
-            <div id="tasks">
-                <input type="checkbox">
-                <label for="text">Fazer dever de casa</label>
-            </div>
-
-            <div id="tasks">
-                <input type="checkbox">
-                <label for="text">Fazer dever de casa</label>
-            </div>
-
-            <div id="tasks">
-                <input type="checkbox">
-                <label for="text">Fazer dever de casa</label>
-            </div>
-            
-            <div id="tasks">
-                <input type="checkbox">
-                <label for="text">Fazer dever de casa</label>
-            </div>
-
-            <div id="tasks">
-                <input type="checkbox">
-                <label for="text">Fazer dever de casa</label>
-            </div>
-
-            <div id="tasks">
-                <input type="checkbox">
-                <label for="text">Fazer dever de casa</label>
-            </div>
-
-            <div id="tasks">
-                <input type="checkbox">
-                <label for="text">Fazer dever de casa</label>
-            </div>
-
-            <div id="tasks">
-                <input type="checkbox">
-                <label for="text">Fazer dever de casa</label>
-            </div>
-
-            <div id="tasks">
-                <input type="checkbox">
-                <label for="text">Fazer dever de casa</label>
-            </div>
-
         </div>
 
     </div>

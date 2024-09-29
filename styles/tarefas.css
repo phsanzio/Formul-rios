@@ -34,6 +34,15 @@ body {
     align-items: center;
 }
 
+#priority_task{
+    margin-top: 20px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
 #filters{
     background-color: white;
     height: 50%;
@@ -47,12 +56,13 @@ body {
 }
 
 #filters > button{
-    width: 55%;
-    height: 20%;
-    font-size: 1.5em;
-    background-color: rgb(248, 228, 191);
-    border-radius: 10px;
-    color: grey;
+    width: 70%;
+    height: 12%;
+    font-size: 1.5vh;
+    background-color: rgb(67, 189, 148);
+    border-radius: 65px;
+    color: rgb(221, 219, 219);
+    font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -69,39 +79,47 @@ form{
 }
 
 #subtitle {
-    font-size: 1.12em;
+    font-size: 1.5vh;
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 #buttons {
     display: flex;
-    justify-content: flex-end;
-    margin-top: 25px;
+    justify-content: center;
+    margin-top: 2vw;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4vw;
 }
 
 #input_task > input{
     width: 95%;
     border-radius: 8px;
-    height: 5vh;
-    margin-top: 10px;
+    height: 4.5vh;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 #buttons > button {
     background: linear-gradient(to right, #5D4037, #685852, #4e4638);
     border-radius: 6px;
-    height: 2.5em;
-    width: 9vh;
-    
+    height: 2.8vw;
+    width: 10vw;
+    font-size: 1.3vw;
+    text-align: center;
     font-weight: bold;
     border: none;
     transition: background 0.3s ease;
     color: #ececec;
 }
 
+button:hover {
+    transform: scale(1.08);
+}
+
 #enter:hover {
     background: linear-gradient(to right, #3F2621, #4A3D3B, #3A3530);
-    transform: scale(1.08)
 }
 
 #view_tarefas {
@@ -121,7 +139,7 @@ form{
 
 #gallery_tasks{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     align-content: flex-start;
     flex-wrap: wrap;
@@ -140,15 +158,31 @@ form{
 
 #tasks > label{
     margin: 0px 10px;
-    background-color: rgb(185, 247, 226);
     border-radius: 20px;
     width: 95%;
     align-content: center;
     padding-left: 15px;
+    font-size: 1.5vh;
     /* height: 50px;
     width: 95%;
     display: flex;
     align-items: center;
     margin-left: 12px;
     padding-left: 5px; */
+}
+
+.task_high > label{
+    background-color: rgb(247, 194, 185);
+}
+
+.task_low > label{
+    background-color: rgb(185, 247, 226);
+}
+
+#hidden_div{
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1.5vw;
+    font-size: 1vw;
 }
