@@ -1,19 +1,25 @@
-
-
+function clear_input(){
+    const hiddenDiv = document.getElementById('hidden_div');
+    hiddenDiv.style.display = 'none';
+    hiddenDiv.textContent = '';
+    
+    const input = document.getElementById('write_task');
+    input.value = '';
+}
 
 
 function save_task(){
 
-    const newTaskContent = document.getElementById('write_task').value;
+    const newTaskContent = document.getElementById('write_task');
 
     const hiddenDiv = document.getElementById('hidden_div');
 
-    if (newTaskContent == ''){
+    if (newTaskContent.value == ''){
         hiddenDiv.textContent = 'Insira a tarefa por favor!';
         hiddenDiv.style.display = 'block';
     } else{
         hiddenDiv.style.display = 'none';
-        hiddenDiv.textContent = 'Insira a tarefa por favor!';
+        hiddenDiv.textContent = '';
         
         const priority = document.querySelector('input[name="priority"]:checked').value;
 
@@ -30,12 +36,13 @@ function save_task(){
         newCheckbox.type = 'checkbox';
 
         const newLabel = document.createElement('label');
-        newLabel.textContent = newTaskContent;
+        newLabel.textContent = newTaskContent.value;
 
         newTask.appendChild(newCheckbox);
         newTask.appendChild(newLabel);
 
         document.getElementById('gallery_tasks').appendChild(newTask);
+        newTaskContent.value = '';
     }
 
 }

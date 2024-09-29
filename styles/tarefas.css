@@ -1,3 +1,7 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 body {
     background: linear-gradient(to bottom right, #3E2723, #6D4C41, #7d7774);
     display: flex;
@@ -5,7 +9,6 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #menu_left {
@@ -20,28 +23,30 @@ body {
     align-items: flex-start;
     margin-left: 20px;
     margin-right: 1em;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
+
 
 #insert_tasks{
     background-color: white;
     height: 50%;
     width: 100%;
     border-radius: 8px;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #priority_task{
-    margin-top: 20px;
+    margin-top: 18px;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
+    font-size: 2vh;
 }
+
 
 #filters{
     background-color: white;
@@ -58,12 +63,11 @@ body {
 #filters > button{
     width: 70%;
     height: 12%;
-    font-size: 1.5vh;
+    font-size: 1.8vh;
     background-color: rgb(67, 189, 148);
     border-radius: 65px;
     color: rgb(221, 219, 219);
     font-weight: bold;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 form{
@@ -79,34 +83,34 @@ form{
 }
 
 #subtitle {
-    font-size: 1.5vh;
+    font-size: 1.6vh;
     margin-bottom: 10px;
-    margin-top: 15px;
+    margin-top: 5px;
 }
 
 #buttons {
     display: flex;
     justify-content: center;
-    margin-top: 2vw;
+    margin-top: 1.2vw;
     flex-direction: column;
     align-items: center;
-    gap: 1.4vw;
+    gap: 1vw;
 }
 
 #input_task > input{
     width: 95%;
     border-radius: 8px;
     height: 4.5vh;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #buttons > button {
     background: linear-gradient(to right, #5D4037, #685852, #4e4638);
     border-radius: 6px;
-    height: 2.8vw;
-    width: 10vw;
-    font-size: 1.3vw;
+    height: 1.6em;
+    width: 8em;
+    font-size: 1.2vw;
     text-align: center;
     font-weight: bold;
     border: none;
@@ -162,7 +166,7 @@ button:hover {
     width: 95%;
     align-content: center;
     padding-left: 15px;
-    font-size: 1.5vh;
+    font-size: 1.8vh;
     /* height: 50px;
     display: flex;
     align-items: center; */
@@ -180,6 +184,6 @@ button:hover {
     color: red;
     font-weight: bold;
     text-align: center;
-    margin-top: 1.5vw;
-    font-size: 1vw;
+    margin-top: 1vw;
+    font-size: 0.8vw;
 }
