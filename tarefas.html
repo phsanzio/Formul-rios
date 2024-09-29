@@ -41,8 +41,8 @@
                 </div>    
 
                 <div id="buttons">
-                    <button type="button" id="enter" onclick="clear_input()">Limpar</button>
-                    <button type="button" id="enter" onclick="save_task()">Salvar</button>
+                    <button type="button" id="clean_save" onclick="clear_input()">Limpar</button>
+                    <button type="button" id="clean_save" onclick="save_task()">Salvar</button>
                 </div>
         
             </form>
@@ -53,11 +53,11 @@
                 <label for="title">FILTROS</label>
             </div>
 
-            <button type="button" id="all">TODAS</button>
-            <button type="button" id="not">NÃO CONCLUÍDAS</button>
-            <button type="button" id="yes">CONCLUÍDAS</button>
-            <button type="button" id="yes">ALTA</button>
-            <button type="button" id="yes">BAIXA</button>
+            <button type="button" onclick="view_allTasks()">TODAS</button>
+            <button type="button" >NÃO CONCLUÍDAS</button>
+            <button type="button" >CONCLUÍDAS</button>
+            <button type="button" onclick="view_highTasks()">ALTA</button>
+            <button type="button" onclick="view_lowTasks()">BAIXA</button>
         </div>
 
     </div>

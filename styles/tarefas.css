@@ -108,9 +108,9 @@ form{
 #buttons > button {
     background: linear-gradient(to right, #5D4037, #685852, #4e4638);
     border-radius: 6px;
-    height: 1.6em;
-    width: 8em;
-    font-size: 1.2vw;
+    height: 1.8em;
+    width: 8.5em;
+    font-size: 1vw;
     text-align: center;
     font-weight: bold;
     border: none;
@@ -122,7 +122,7 @@ button:hover {
     transform: scale(1.08);
 }
 
-#enter:hover {
+#clean_save:hover {
     background: linear-gradient(to right, #3F2621, #4A3D3B, #3A3530);
 }
 

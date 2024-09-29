@@ -1,3 +1,5 @@
+let style;
+
 function clear_input(){
     const hiddenDiv = document.getElementById('hidden_div');
     hiddenDiv.style.display = 'none';
@@ -47,9 +49,37 @@ function save_task(){
 
 }
 
+function view_lowTasks(){
+    
+    if (style) {
+        document.head.removeChild(style);
+        style = null;
+    }
+
+    style = document.createElement('style');
+    style.innerHTML = '#tasks.task_high {display: none !important;}';
+    document.head.appendChild(style);
+
+}
+
+function view_highTasks(){
+    if (style) {
+        document.head.removeChild(style);
+        style = null;
+    }
+
+    style = document.createElement('style');
+    style.innerHTML = '#tasks.task_low {display: none !important;}';
+    document.head.appendChild(style);
+}
 
 
-
+function view_allTasks(){
+    if (style) {
+        document.head.removeChild(style);
+        style = null;
+    }
+}
 
 // function on_off() {
     
