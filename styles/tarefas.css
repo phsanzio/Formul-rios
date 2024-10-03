@@ -3,7 +3,7 @@
 }
 
 body {
-    background: linear-gradient(to bottom right, #3E2723, #6D4C41, #7d7774);
+    background-color: #533A71;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,7 +27,7 @@ body {
 
 
 #insert_tasks{
-    background-color: white;
+    background-color: #FFEAEE;
     height: 50%;
     width: 100%;
     border-radius: 8px;
@@ -49,7 +49,7 @@ body {
 
 
 #filters{
-    background-color: white;
+    background-color: #FFEAEE;
     height: 50%;
     width: 100%;
     border-radius: 8px;
@@ -64,10 +64,11 @@ body {
     width: 70%;
     height: 12%;
     font-size: 1.8vh;
-    background-color: rgb(67, 189, 148);
+    background-color: #81C14B;
     border-radius: 65px;
-    color: rgb(221, 219, 219);
-    font-weight: bold;
+    color: #0A0903;
+    border: none;
+    font-weight: bolder;
 }
 
 form{
@@ -103,10 +104,11 @@ form{
     height: 4.5vh;
     margin-top: 10px;
     margin-bottom: 10px;
+    border: none;
 }
 
 #buttons > button {
-    background: linear-gradient(to right, #5D4037, #685852, #4e4638);
+    background-color: #ca5be6;
     border-radius: 6px;
     height: 1.8em;
     width: 8.5em;
@@ -122,16 +124,16 @@ button:hover {
     transform: scale(1.08);
 }
 
-#clean_save:hover {
+/* #clean_save:hover {
     background: linear-gradient(to right, #3F2621, #4A3D3B, #3A3530);
-}
+} */
 
 #view_tarefas {
     box-sizing: border-box;
     border-radius: 8px;
     width: 81%;
     height: 95%;
-    background-color: #ffffff;
+    background-color: #FFEAEE;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -152,7 +154,7 @@ button:hover {
     gap: 1.5vw 3vw;
 }
 
-#tasks{
+#task_high, #task_low{
     display: flex;
     flex-direction: row;
     width: 30%;
@@ -160,29 +162,30 @@ button:hover {
     align-content: center;
 }
 
-#tasks > label{
+#task_high > label, #task_low > label{
     margin: 0px 10px;
     border-radius: 20px;
     width: 95%;
     align-content: center;
     padding-left: 15px;
     font-size: 1.8vh;
+    color: #0A0903;
     /* height: 50px;
     display: flex;
     align-items: center; */
 }
 
-.task_high > label{
-    background-color: rgb(247, 194, 185);
+#task_high > label{
+    background-color: #FE5F55;
 }
 
-.task_low > label{
-    background-color: rgb(185, 247, 226);
+#task_low > label{
+    background-color: #94C9A9;
 }
 
 #hidden_div{
-    color: red;
-    font-weight: bold;
+    color: #FC3527;
+    font-weight: bolder;
     text-align: center;
     margin-top: 1vw;
     font-size: 0.8vw;

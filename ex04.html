@@ -6,6 +6,7 @@
     <title>Site 04 - Pedro Sanzio</title>
     <link rel="stylesheet" href="styles/style04.css">
     <script src="scripts/ex04.js"></script>
+    <link type="image/png" sizes="32x32" rel="icon" href="favicons/xicara-de-cafe.png">
 </head>
 <body>
     <form id="div_coffeeshop">
@@ -23,17 +24,17 @@
             <div id="drink_options">
 
                 <div id="dt_opt">
-                    <input type="checkbox" name="bebida" value="coffee" checked> Café puro
+                    <input type="checkbox" name="bebida" value="coffee"  onclick="selected_one(this)"> Café puro
                     <img src="images/coffee.png" alt="image of coffee">
                 </div>
 
                 <div id="dt_opt">
-                    <input type="checkbox" name="bebida" value="milk"> Café com leite
+                    <input type="checkbox" name="bebida" value="milk" onclick="selected_one(this)"> Café com leite
                     <img src="images/coffee_with_milk.png" alt="image of coffee with milk">
                 </div>
 
                 <div id="dt_opt">
-                    <input type="checkbox" name="bebida" value="chocolate"> Chocolate
+                    <input type="checkbox" name="bebida" value="chocolate" onclick="selected_one(this)"> Chocolate
                     <img src="images/chocolate.png" alt="image of chocolate">
                 </div>
                 

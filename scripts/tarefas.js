@@ -26,12 +26,14 @@ function save_task(){
         const priority = document.querySelector('input[name="priority"]:checked').value;
 
         const newTask = document.createElement('div');
-        newTask.id = 'tasks';
+        //newTask.id = 'tasks';
 
         if (priority == 'alta'){
-            newTask.classList.add('task_high');
+            newTask.id = 'task_high';
+            // newTask.classList.add('task_high');
         } else {
-            newTask.classList.add('task_low');
+            newTask.id = 'task_low';
+            //newTask.classList.add('task_low');
         }
 
         const newCheckbox = document.createElement('input');
@@ -57,7 +59,7 @@ function view_lowTasks(){
     }
 
     style = document.createElement('style');
-    style.innerHTML = '#tasks.task_high {display: none !important;}';
+    style.innerHTML = '#task_high {display: none !important;}';
     document.head.appendChild(style);
 
 }
@@ -69,7 +71,7 @@ function view_highTasks(){
     }
 
     style = document.createElement('style');
-    style.innerHTML = '#tasks.task_low {display: none !important;}';
+    style.innerHTML = '#task_low {display: none !important;}';
     document.head.appendChild(style);
 }
 
