@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 *{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lato';
 }
 
 body {
@@ -184,10 +186,6 @@ button:hover {
     /* height: 50px;
     display: flex;
     align-items: center; */
-}
-
-#task_high > input:hover, #task_low > input:hover{
-    border: 2.2px solid #875eb8;
 }
 
 #task_high > label{
