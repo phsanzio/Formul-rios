@@ -11,9 +11,7 @@ function clear_input(){
 
 
 function save_task(){
-
     const newTaskContent = document.getElementById('write_task');
-
     const hiddenDiv = document.getElementById('hidden_div');
 
     if (newTaskContent.value == ''){
@@ -26,14 +24,13 @@ function save_task(){
         const priority = document.querySelector('input[name="priority"]:checked').value;
 
         const newTask = document.createElement('div');
-        //newTask.id = 'tasks';
+        
+        newTask.classList.add('todo')
 
         if (priority == 'alta'){
             newTask.id = 'task_high';
-            // newTask.classList.add('task_high');
         } else {
             newTask.id = 'task_low';
-            //newTask.classList.add('task_low');
         }
 
         const newCheckbox = document.createElement('input');
@@ -42,13 +39,25 @@ function save_task(){
         const newLabel = document.createElement('label');
         newLabel.textContent = newTaskContent.value;
 
+        
+        newCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+                newLabel.style.textDecoration = 'line-through';
+                newTask.classList.remove('todo');
+                newTask.classList.add('done'); 
+            } else {
+                newLabel.style.textDecoration = 'none';  
+                newTask.classList.remove('done');
+                newTask.classList.add('todo'); 
+            }
+        });
+
         newTask.appendChild(newCheckbox);
         newTask.appendChild(newLabel);
 
         document.getElementById('gallery_tasks').appendChild(newTask);
         newTaskContent.value = '';
     }
-
 }
 
 function view_lowTasks(){
@@ -75,6 +84,27 @@ function view_highTasks(){
     document.head.appendChild(style);
 }
 
+function view_doneTasks(){
+    if (style) {
+        document.head.removeChild(style);
+        style = null;
+    }
+
+    style = document.createElement('style');
+    style.innerHTML = '.todo {display: none !important;}';
+    document.head.appendChild(style);
+}
+
+function view_todoTasks(){
+    if (style) {
+        document.head.removeChild(style);
+        style = null;
+    }
+
+    style = document.createElement('style');
+    style.innerHTML = '.done {display: none !important;}';
+    document.head.appendChild(style);
+}
 
 function view_allTasks(){
     if (style) {
@@ -82,21 +112,3 @@ function view_allTasks(){
         style = null;
     }
 }
-
-// function on_off() {
-    
-//     const input_choco = document.querySelector('input[value="chocolate"]');
-
-//     const torras_div = document.getElementById('torras');
-        
-//     if (input_choco.checked) {
-//         torras_div.style.display = 'none';
-//     } else {
-//         torras_div.style.display = 'block';
-//     }
-// }
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     const input_choco = document.querySelector('input[value="chocolate"]');
-//     input_choco.addEventListener('change', on_off);
-// });

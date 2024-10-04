@@ -69,6 +69,11 @@ body {
     color: #0A0903;
     border: none;
     font-weight: bolder;
+    transition: background 0.3s ease;
+}
+
+#filters > button:focus, #filters > button:hover{
+    background-color: #6ba898;
 }
 
 form{
@@ -105,6 +110,8 @@ form{
     margin-top: 10px;
     margin-bottom: 10px;
     border: none;
+    transition: background 0.3s ease;
+    outline: transparent;
 }
 
 #buttons > button {
@@ -124,9 +131,13 @@ button:hover {
     transform: scale(1.08);
 }
 
-/* #clean_save:hover {
-    background: linear-gradient(to right, #3F2621, #4A3D3B, #3A3530);
-} */
+#input_task > input:hover, #input_task > input:focus{
+    border: 2.2px solid #875eb8;
+}
+
+#clean_save:hover {
+    background-color: #7f3a90;
+}
 
 #view_tarefas {
     box-sizing: border-box;
@@ -173,6 +184,10 @@ button:hover {
     /* height: 50px;
     display: flex;
     align-items: center; */
+}
+
+#task_high > input:hover, #task_low > input:hover{
+    border: 2.2px solid #875eb8;
 }
 
 #task_high > label{
