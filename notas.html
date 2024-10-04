@@ -3,38 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarefas - Pedro Sanzio</title>
-    <link rel="stylesheet" href="styles/tarefas.css">
-    <script src="scripts/tarefas.js"></script>
+    <title>Notas - Pedro Sanzio</title>
+    <link rel="stylesheet" href="styles/notas.css">
+    <script src="scripts/notas.js"></script>
+    <link type="image/png" sizes="64x64" rel="icon" href="favicons/bloco-de-anotacoes.png">
 </head>
 <body>
-    <div id="insert_tasks">
-        <form>
-
-            <div id="title">
-                <label for="title">toDO list</label>
-            </div>
+    <div id="menu_left">
+        <div id="insert_tasks">
+            <form>
     
-            <div id="new_tasks">
-
-                <div id="subtitle">
-                    <label for="text">Insira uma nova tarefa</label>
+                <div id="title">
+                    <label for="title">NOTES</label>
                 </div>
-                <div id="input_task">
-                    <input type="text">
+        
+                <div id="new_tasks">
+    
+                    <div id="subtitle">
+                        <label for="text">Título</label>
+                    </div>
+
+                    <div id="input_task">
+                        <input type="text" id="write_task">
+                    </div>
+
+                    <div id="subtitle">
+                        <label for="text">Conteúdo</label>
+                    </div>
+
+                    <div id="input_task">
+                        <textarea name="corpo_nota" id="write_task"></textarea>
+                    </div>
+
+    
                 </div>
                 
-            </div>
-    
-            <div id="buttons">
-                <button type="button" id="enter">Salvar</button>
-            </div>
-    
-        </form>
+                <div id="hidden_div" style="display: none;">
+                </div>    
+
+                <div id="buttons">
+                    <button type="button" id="clean_save" onclick="clear_input()">Limpar</button>
+                    <button type="button" id="clean_save" onclick="save_task()">Salvar</button>
+                </div>
+        
+            </form>
+        </div>
+
+
     </div>
     
-    <div id="view_tarefas"></div>
-        
+    
+    <div id="view_tarefas">
+
+        <div id="gallery_tasks">
+        </div>
+
     </div>
 
 </body>

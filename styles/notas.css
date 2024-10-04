@@ -1,28 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    font-family: 'Lato';
+}
+
 body {
-    background: linear-gradient(to bottom right, #3E2723, #6D4C41, #7d7774);
+    background-color: #533A71;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-#insert_tasks {
+#menu_left {
     box-sizing: border-box;
-    border-radius: 8px;
     width: 19%;
     height: 95%;
-    padding: 10px;
-    background-color: #ffffff;
+    padding-left: 5px;
+    padding-right: 5px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     margin-left: 20px;
     margin-right: 1em;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
+
+
+#insert_tasks{
+    background-color: #FFEAEE;
+    height: 50%;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 form{
     width: 95%;
@@ -30,71 +46,126 @@ form{
 }
 
 #title {
-    font-size: 1.8vh;
+    font-size: 2.5vh;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
-#acom_options {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-#a_opt {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 0.95em;
-    margin-bottom: 10px;
-}
-
 #subtitle {
-    font-size: 1.12em;
+    font-size: 1.6vh;
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 #buttons {
     display: flex;
-    justify-content: flex-end;
-    margin-top: 15px;
+    justify-content: center;
+    margin-top: 1.2vw;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
 }
 
-input{
-    width: 25vh;
+#write_task{
+    width: 95%;
     border-radius: 8px;
-    height: 20vh;
+    height: 4.5vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    transition: background 0.3s ease;
+    outline: transparent;
+    resize: vertical;
+    max-height: 14vh;
+    min-height: 4.5vh;
+    box-shadow: 0 0 15px rgba(230, 198, 255, 0.888);
 }
 
-button {
-    background: linear-gradient(to right, #5D4037, #685852, #4e4638);
+#buttons > button {
+    background-color: #ca5be6;
     border-radius: 6px;
-    height: 2.5em;
-    width: 9vh;
-    
+    height: 1.8em;
+    width: 8.5em;
+    font-size: 1vw;
+    text-align: center;
     font-weight: bold;
     border: none;
     transition: background 0.3s ease;
     color: #ececec;
 }
 
-#enter:hover {
-    background: linear-gradient(to right, #3F2621, #4A3D3B, #3A3530);
-    transform: scale(1.08)
+button:hover {
+    transform: scale(1.08);
+}
+
+#write_task:hover, #write_task:focus{
+    border: 2.2px solid #875eb8;
+}
+
+#clean_save:hover {
+    background-color: #7f3a90;
 }
 
 #view_tarefas {
     box-sizing: border-box;
-    border-radius: 8px;
+    border-radius: 10px;
     width: 81%;
-    height: 95%;
-    padding: 20px;
-    background-color: #ffffff;
+    height: 85%;
+    background-color: #FFEAEE;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin-right: 20px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+#gallery_tasks{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    width: 98%;
+    height: 98%;
+    gap: 1.5vw 3vw;
+}
+
+#task_high, #task_low{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    height: 5%;
+    align-content: center;
+}
+
+#task_high > label, #task_low > label{
+    margin: 0px 10px;
+    border-radius: 20px;
+    width: 95%;
+    align-content: center;
+    padding-left: 15px;
+    font-size: 1.8vh;
+    color: #0A0903;
+    /* height: 50px;
+    display: flex;
+    align-items: center; */
+}
+
+#task_high > label{
+    background-color: #FE5F55;
+}
+
+#task_low > label{
+    background-color: #94C9A9;
+}
+
+#hidden_div{
+    color: #FC3527;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 1vw;
+    font-size: 0.8vw;
 }
