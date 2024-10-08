@@ -21,17 +21,11 @@ function save_task(){
         hiddenDiv.style.display = 'none';
         hiddenDiv.textContent = '';
         
-        const priority = document.querySelector('input[name="priority"]:checked').value;
 
         const newTask = document.createElement('div');
         
         newTask.classList.add('todo')
 
-        if (priority == 'alta'){
-            newTask.id = 'task_high';
-        } else {
-            newTask.id = 'task_low';
-        }
 
         const newCheckbox = document.createElement('input');
         newCheckbox.type = 'checkbox';
@@ -60,55 +54,19 @@ function save_task(){
     }
 }
 
-function view_lowTasks(){
-    
-    if (style) {
-        document.head.removeChild(style);
-        style = null;
-    }
 
-    style = document.createElement('style');
-    style.innerHTML = '#task_high {display: none !important;}';
-    document.head.appendChild(style);
+function searchNotes() {
+    const searchValue = document.getElementById('search_input').value.toLowerCase();
+    const notes = document.querySelectorAll('#gallery_tasks .note');
 
-}
+    notes.forEach(note => {
+        const title = note.querySelector('#note_title').textContent.toLowerCase();
+        const content = note.querySelector('#note_content').textContent.toLowerCase();
 
-function view_highTasks(){
-    if (style) {
-        document.head.removeChild(style);
-        style = null;
-    }
-
-    style = document.createElement('style');
-    style.innerHTML = '#task_low {display: none !important;}';
-    document.head.appendChild(style);
-}
-
-function view_doneTasks(){
-    if (style) {
-        document.head.removeChild(style);
-        style = null;
-    }
-
-    style = document.createElement('style');
-    style.innerHTML = '.todo {display: none !important;}';
-    document.head.appendChild(style);
-}
-
-function view_todoTasks(){
-    if (style) {
-        document.head.removeChild(style);
-        style = null;
-    }
-
-    style = document.createElement('style');
-    style.innerHTML = '.done {display: none !important;}';
-    document.head.appendChild(style);
-}
-
-function view_allTasks(){
-    if (style) {
-        document.head.removeChild(style);
-        style = null;
-    }
+        if (title.includes(searchValue) || content.includes(searchValue)) {
+            note.classList.remove('hidden'); 
+        } else {
+            note.classList.add('hidden');
+        }
+    });
 }
