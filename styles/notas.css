@@ -185,7 +185,6 @@ button:hover {
 }
 
 .note > label{
-    margin: 5px 5px;
     border-radius: 20px;
     width: 92%;
     align-content: center;
@@ -193,6 +192,8 @@ button:hover {
 }
 
 #note_title{
+    margin-top: 8px;
+    margin-left: 8px;
     font-size: 1.7vh;
     text-decoration: 1.5px underline;
     font-weight: bold;
@@ -202,6 +203,8 @@ button:hover {
     font-size: 1.1vh;
     word-wrap: break-word;
     line-height: 1.2em;
+    margin-top: 5px;
+    margin-left: 8px;
 }
 
 .note:hover{
