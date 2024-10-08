@@ -1,20 +1,22 @@
-let style;
 
 function clear_input(){
     const hiddenDiv = document.getElementById('hidden_div');
     hiddenDiv.style.display = 'none';
     hiddenDiv.textContent = '';
     
-    const input = document.getElementById('write_task');
-    input.value = '';
+    const newNoteTitle = document.getElementById('write_title');
+    const newNoteContent = document.getElementById('write_content');
+    newNoteTitle.value = '';
+    newNoteContent.value = '';
 }
 
 
-function save_task(){
-    const newTaskContent = document.getElementById('write_task');
+function save_note(){
+    const newNoteTitle = document.getElementById('write_title');
+    const newNoteContent = document.getElementById('write_content');
     const hiddenDiv = document.getElementById('hidden_div');
 
-    if (newTaskContent.value == ''){
+    if (newNoteContent.value == '' || newNoteTitle.value == ''){
         hiddenDiv.textContent = 'Insira a tarefa por favor!';
         hiddenDiv.style.display = 'block';
     } else{
@@ -22,42 +24,33 @@ function save_task(){
         hiddenDiv.textContent = '';
         
 
-        const newTask = document.createElement('div');
+        const newNote = document.createElement('div');
         
-        newTask.classList.add('todo')
+        newNote.classList.add('note');
 
 
-        const newCheckbox = document.createElement('input');
-        newCheckbox.type = 'checkbox';
+        const newTitle = document.createElement('label');
+        newTitle.textContent = newNoteTitle.value;
+        newTitle.id = 'note_title';
 
-        const newLabel = document.createElement('label');
-        newLabel.textContent = newTaskContent.value;
-
+        const newContent = document.createElement('label');
+        newContent.textContent = newNoteContent.value;
+        newContent.id = 'note_content';
         
-        newCheckbox.addEventListener('change', function() {
-            if (this.checked) {
-                newLabel.style.textDecoration = 'line-through';
-                newTask.classList.remove('todo');
-                newTask.classList.add('done'); 
-            } else {
-                newLabel.style.textDecoration = 'none';  
-                newTask.classList.remove('done');
-                newTask.classList.add('todo'); 
-            }
-        });
 
-        newTask.appendChild(newCheckbox);
-        newTask.appendChild(newLabel);
+        newNote.appendChild(newTitle);
+        newNote.appendChild(newContent);
 
-        document.getElementById('gallery_tasks').appendChild(newTask);
-        newTaskContent.value = '';
+        document.getElementById('gallery_notes').appendChild(newNote);
+        newNoteTitle.value = '';
+        newNoteContent.value = '';
     }
 }
 
 
 function searchNotes() {
     const searchValue = document.getElementById('search_input').value.toLowerCase();
-    const notes = document.querySelectorAll('#gallery_tasks .note');
+    const notes = document.querySelectorAll('#gallery_notes .note');
 
     notes.forEach(note => {
         const title = note.querySelector('#note_title').textContent.toLowerCase();

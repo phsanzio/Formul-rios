@@ -10,29 +10,29 @@
 </head>
 <body>
     <div id="menu_left">
-        <div id="insert_tasks">
+        <div id="insert_notes">
             <form>
     
                 <div id="title">
                     <label for="title">NOTES</label>
                 </div>
         
-                <div id="new_tasks">
+                <div id="new_notes">
     
                     <div id="subtitle">
                         <label for="text">Título</label>
                     </div>
 
                     <div id="input_task">
-                        <input type="text" id="write_task">
+                        <input type="text" id="write_title" class="write_note">
                     </div>
 
                     <div id="subtitle">
-                        <label for="text">Conteúdo</label>
+                        <label for="text" id="">Conteúdo</label>
                     </div>
 
                     <div id="input_task">
-                        <textarea name="corpo_nota" id="write_task"></textarea>
+                        <textarea name="corpo_nota" id="write_content" class="write_note"></textarea>
                     </div>
 
     
@@ -43,7 +43,7 @@
 
                 <div id="buttons">
                     <button type="button" id="clean_save" onclick="clear_input()">Limpar</button>
-                    <button type="button" id="clean_save" onclick="save_task()">Salvar</button>
+                    <button type="button" id="clean_save" onclick="save_note()">Salvar</button>
                 </div>
         
             </form>
@@ -53,13 +53,13 @@
     </div>
     
     
-    <div id="view_tarefas">
+    <div id="view_notes">
 
         <div id="search_div">
             <input type="text" placeholder="Pesquise..." id="search_input" onkeyup="searchNotes()">
         </div>
 
-        <div id="gallery_tasks">
+        <div id="gallery_notes">
 
             <div class="note">
                 <label id="note_title">Senhas dos meus apps</label>
