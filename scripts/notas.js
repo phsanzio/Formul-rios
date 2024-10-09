@@ -27,7 +27,10 @@ function save_note(){
         const newNote = document.createElement('div');
         
         newNote.classList.add('note');
-
+        
+        const newDivContent = document.createElement('div');
+        newDivContent.classList.add('content_note');
+         
 
         const newTitle = document.createElement('label');
         newTitle.textContent = newNoteTitle.value;
@@ -37,9 +40,22 @@ function save_note(){
         newContent.textContent = newNoteContent.value;
         newContent.id = 'note_content';
         
+        newDivContent.appendChild(newTitle);
+        newDivContent.appendChild(newContent);
 
-        newNote.appendChild(newTitle);
-        newNote.appendChild(newContent);
+        const newDivDelete = document.createElement('div');
+        newDivDelete.classList.add('div_delete');
+        const button_delete = document.createElement('div');
+        button_delete.classList.add('delete_button');
+        button_delete.onclick = function(){deleteNote(button_delete); };
+        const icon = document.createElement('img');
+        icon.src = 'images/excluir.png';
+        icon.alt = 'Excluir'
+        button_delete.appendChild(icon);
+        newDivDelete.appendChild(button_delete);
+
+        newNote.appendChild(newDivContent);
+        newNote.appendChild(newDivDelete);
 
         document.getElementById('gallery_notes').appendChild(newNote);
         newNoteTitle.value = '';
@@ -62,4 +78,12 @@ function searchNotes() {
             note.classList.add('hidden');
         }
     });
+}
+
+function deleteNote(button) {
+
+    const father1 = button.parentElement;
+    const note = father1.parentElement;
+
+    note.remove();
 }
