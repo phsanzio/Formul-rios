@@ -52,8 +52,17 @@ function save_task(){
             }
         });
 
+        const button_delete = document.createElement('button');
+        button_delete.classList.add('delete_button');
+        button_delete.onclick = function(){deleteNote(button_delete); };
+        const icon = document.createElement('img');
+        icon.src = 'images/excluir.png';
+        icon.alt = 'Excluir'
+        button_delete.appendChild(icon);
+
         newTask.appendChild(newCheckbox);
         newTask.appendChild(newLabel);
+        newTask.appendChild(button_delete)
 
         document.getElementById('gallery_tasks').appendChild(newTask);
         newTaskContent.value = '';
@@ -111,4 +120,11 @@ function view_allTasks(){
         document.head.removeChild(style);
         style = null;
     }
+}
+
+function deleteNote(button) {
+
+    const task = button.parentElement;
+
+    task.remove();
 }

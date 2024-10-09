@@ -45,7 +45,7 @@ function save_note(){
 
         const newDivDelete = document.createElement('div');
         newDivDelete.classList.add('div_delete');
-        const button_delete = document.createElement('div');
+        const button_delete = document.createElement('button');
         button_delete.classList.add('delete_button');
         button_delete.onclick = function(){deleteNote(button_delete); };
         const icon = document.createElement('img');

@@ -231,7 +231,7 @@ button:hover {
     margin-bottom: 5px;
 }
 
-img{
+.delete_button > img{
     height: 20px;
     width: 20px;
 }

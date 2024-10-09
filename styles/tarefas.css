@@ -185,9 +185,6 @@ button:hover {
     padding-left: 15px;
     font-size: 1.8vh;
     color: #0A0903;
-    /* height: 50px;
-    display: flex;
-    align-items: center; */
 }
 
 #task_high > label{
@@ -208,4 +205,16 @@ button:hover {
 
 .todo:hover, .done:hover{
     transform: scale(1.04);
+}
+
+.delete_button {
+    background-color: transparent;
+    border: none; 
+    cursor: pointer; 
+  
+}
+
+.delete_button > img{
+    height: 28px;
+    width: 28px;
 }
